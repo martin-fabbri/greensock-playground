@@ -1,0 +1,26 @@
+{
+  "name": "greensock-playground",
+  "version": "1.0.0",
+  "description": "greenshock animations library playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin-fabbri/greensock-playground.git"
+  },
+  "author": "mf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martin-fabbri/greensock-playground/issues"
+  },
+  "homepage": "https://github.com/martin-fabbri/greensock-playground#readme",
+  "keywords": [
+    "animations",
+    "greensock"
+  ],
+  "dependencies": {
+    "gsap": "^1.18.2"
+  }
+}
