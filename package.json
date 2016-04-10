@@ -21,6 +21,17 @@
     "greensock"
   ],
   "dependencies": {
-    "gsap": "^1.18.2"
+    "gsap": "^1.18.2",
+    "jquery": "^2.2.3",
+    "typings": "^0.7.12"
+  },
+  "devDependencies": {
+    "jspm": "^0.16.32",
+    "tsd": "^0.6.5",
+    "typescript": "^1.8.9"
+  },
+  "jspm": {
+    "dependencies": {},
+    "devDependencies": {}
   }
 }
