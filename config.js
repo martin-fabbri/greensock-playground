@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/",
+  baseURL: "/TweenLite-playground/",
   defaultJSExtensions: true,
   transpiler: false,
   paths: {}

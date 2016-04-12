@@ -16,7 +16,7 @@ interface IDispatcher {
 declare type Tween = TweenLite | TweenMax;
 declare type Timeline = SimpleTimeline | TimelineLite | TimelineMax;
 
-//com.greensock.core
+//com.TweenLite.core
 declare class Animation {
     static ticker: IDispatcher;
     data: any;
@@ -70,7 +70,7 @@ declare class SimpleTimeline extends Animation {
     render(time: number, suppressEvents?: boolean, force?: boolean): void;
 }
 
-//com.greensock
+//com.TweenLite
 declare class TweenLite extends Animation {
     static defaultEase: Ease;
     static defaultOverwrite: string;
@@ -79,16 +79,16 @@ declare class TweenLite extends Animation {
 
     constructor(target: Object, duration: number, vars: Object);
 
-    static delayedCall(delay: number, callback: Function, params?: any[], scope?: any, useFrames?: boolean): TweenLite;
+    delayedCall(delay: number, callback: Function, params?: any[], scope?: any, useFrames?: boolean): TweenLite;
     endTime(includeRepeats?: boolean): number;
-    static from(target: Object | Object[], duration: number, vars: Object): TweenLite;
-    static fromTo(target: Object | Object[], duration: number, fromVars: Object, toVars: Object): TweenLite;
-    static getTweensOf(target: Object, onlyActive: boolean): Tween[];
-    static killDelayedCallsTo(func: Function): void;
-    static killTweensOf(target: Object, onlyActive?: boolean, vars?: Object): void;
-    static lagSmoothing(threshold: number, adjustedLag: number): void;
-    static set(target: Object, vars: Object): TweenLite;
-    static to(target: Object, duration: number, vars: Object): TweenLite;
+    from(target: Object | Object[], duration: number, vars: Object): TweenLite;
+    fromTo(target: Object | Object[], duration: number, fromVars: Object, toVars: Object): TweenLite;
+    getTweensOf(target: Object, onlyActive: boolean): Tween[];
+    killDelayedCallsTo(func: Function): void;
+    killTweensOf(target: Object, onlyActive?: boolean, vars?: Object): void;
+    lagSmoothing(threshold: number, adjustedLag: number): void;
+    set(target: Object, vars: Object): TweenLite;
+    to(target: Object, duration: number, vars: Object): TweenLite;
 }
 
 declare class TweenMax extends TweenLite {
@@ -168,7 +168,7 @@ declare class TimelineMax extends TimelineLite {
     yoyo(value: boolean): TimelineMax;
 }
 
-//com.greensock.easing
+//com.TweenLite.easing
 interface Back {
     easeIn:Ease;
     easeInOut:Ease;
@@ -274,7 +274,7 @@ interface Strong {
     easeOut:Ease;
 }
 
-//com.greensock.plugins
+//com.TweenLite.plugins
 interface BezierPlugin extends TweenPlugin {
     bezierThrough(values:any[], curviness?:number, quadratic?:boolean, correlate?:string, prepend?:Object, calcDifs?:boolean):Object;
     cubicToQuadratic(a:number, b:number, c:number, d:number):any[];
@@ -305,7 +305,7 @@ interface TweenPlugin {
     activate(plugins:any[]):boolean;
 }
 
-//com.greensock.easing
+//com.TweenLite.easing
 declare var Back:Back;
 declare var Bounce:Bounce;
 declare var Circ:Circ;
@@ -328,7 +328,7 @@ declare var SlowMo:SlowMo;
 declare var SteppedEase:SteppedEase;
 declare var Strong:Strong;
 
-//com.greensock.plugins
+//com.TweenLite.plugins
 declare var BezierPlugin:BezierPlugin;
 declare var ColorPropsPlugin:ColorPropsPlugin;
 declare var CSSPlugin:CSSPlugin;
@@ -338,3 +338,10 @@ declare var RaphaelPlugin:RaphaelPlugin;
 declare var RoundPropsPlugin:RoundPropsPlugin;
 declare var ScrollToPlugin:ScrollToPlugin;
 declare var TweenPlugin:TweenPlugin;
+
+declare var tweenLite: TweenLite;
+
+declare module "TweenLite" {
+    export = tweenLite;
+}
+

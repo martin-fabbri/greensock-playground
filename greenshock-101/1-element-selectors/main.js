@@ -15,6 +15,6 @@ var intro = document.getElementsByClassName('intro');
 var firstItem = document.getElementsByClassName('list')[0].firstElementChild;
 var lastItem = document.getElementsByClassName('list')[0].lastElementChild;
 //endregion
-TweenLite.to(firstItem, 1, { opacity: 0, x: 50 });
+TweenLite.to(h1, 1, { opacity: 0, x: 50 });
 //})(jQuery);
 //# sourceMappingURL=main.js.map

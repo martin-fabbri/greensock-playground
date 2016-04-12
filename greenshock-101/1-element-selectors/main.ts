@@ -19,7 +19,7 @@
     const lastItem = document.getElementsByClassName('list')[0].lastElementChild;
     //endregion
 
-    TweenLite.to(firstItem, 1, {opacity: 0, x: 50});
+    TweenLite.to(h1, 1, {opacity: 0, x: 50});
 
 
 //})(jQuery);
