@@ -7,13 +7,10 @@
 
 // JavaScript Docs http://api.greensock.com/js/
 // Version 1.15.1 (TypeScript 1.4)
+declare module "TimelineLite" {
+    var timelineLite: TimelineLiteFactory;
 
-interface IDispatcher {
-    addEventListener(type:string, callback:Function, scope?:Object, useParam?:boolean, priority?:number):void;
-    removeEventListener(type:string, callback:Function):void;
-}
-
-
+    export = timelineLite;
 
     type Tween = TweenLite | TweenMax;
     type Timeline = SimpleTimeline | TimelineLite;
@@ -149,187 +146,153 @@ interface IDispatcher {
         usesFrames(): boolean;
     }
 
-interface TimelineLiteFactory {
-    new(): TimelineLite;
-}
-
-declare var timelineLite: TimelineLiteFactory;
-
-declare module "TimelineLite" {
-    export = timelineLite;
-}
+    interface TimelineLiteFactory {
+        new(): TimelineLite;
+    }
 
 //com.TweenLite.easing
-interface Back {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Bounce {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Circ {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Cubic {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Ease {
-    getRatio(p:number):number;
-}
-interface EaseLookup {
-    find(name:string):Ease;
-}
-interface Elastic {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Expo {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Linear {
-    ease:Linear;
-    easeIn:Linear;
-    easeInOut:Linear;
-    easeNone:Linear;
-    easeOut:Linear;
-}
-interface Power0 {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Power1 {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Power2 {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Power3 {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Power4 {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Quad {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Quart {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Quint {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface Sine {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-interface SlowMo {
-    ease:SlowMo;
+    interface Back {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Bounce {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Circ {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Cubic {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Ease {
+        getRatio(p:number):number;
+    }
+    interface EaseLookup {
+        find(name:string):Ease;
+    }
+    interface Elastic {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Expo {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Linear {
+        ease:Linear;
+        easeIn:Linear;
+        easeInOut:Linear;
+        easeNone:Linear;
+        easeOut:Linear;
+    }
+    interface Power0 {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Power1 {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Power2 {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Power3 {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Power4 {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Quad {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Quart {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Quint {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface Sine {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
+    interface SlowMo {
+        ease:SlowMo;
 
-    new (linearRatio:number, power:number, yoyoMode:boolean):SlowMo;
-    config(linearRatio:number, power:number, yoyoMode:boolean):SlowMo;
-    getRatio(p:number):number;
-}
-interface SteppedEase {
-    config(steps:number):SteppedEase;
-    getRatio(p:number):number;
-}
-interface Strong {
-    easeIn:Ease;
-    easeInOut:Ease;
-    easeOut:Ease;
-}
-
-//com.TweenLite.plugins
-interface BezierPlugin extends TweenPlugin {
-    bezierThrough(values:any[], curviness?:number, quadratic?:boolean, correlate?:string, prepend?:Object, calcDifs?:boolean):Object;
-    cubicToQuadratic(a:number, b:number, c:number, d:number):any[];
-    quadraticToCubic(a:number, b:number, c:number):Object;
-}
-interface ColorPropsPlugin extends TweenPlugin {
-
-}
-interface CSSPlugin extends TweenPlugin {
-
-}
-interface CSSRulePlugin extends TweenPlugin {
-    getRule(selector:string):Object;
-}
-interface EaselPlugin extends TweenPlugin {
-
-}
-interface RaphaelPlugin extends TweenPlugin {
-
-}
-interface RoundPropsPlugin extends TweenPlugin {
-
-}
-interface ScrollToPlugin extends TweenPlugin {
-
-}
-interface TweenPlugin {
-    activate(plugins:any[]):boolean;
-}
-
-//com.TweenLite.easing
-declare var Back:Back;
-declare var Bounce:Bounce;
-declare var Circ:Circ;
-declare var Cubic:Cubic;
-declare var Ease:Ease;
-declare var EaseLookup:EaseLookup;
-declare var Elastic:Elastic;
-declare var Expo:Expo;
-declare var Linear:Linear;
-declare var Power0:Power0;
-declare var Power1:Power1;
-declare var Power2:Power2;
-declare var Power3:Power3;
-declare var Power4:Power4;
-declare var Quad:Quad;
-declare var Quart:Quart;
-declare var Quint:Quint;
-declare var Sine:Sine;
-declare var SlowMo:SlowMo;
-declare var SteppedEase:SteppedEase;
-declare var Strong:Strong;
+        new (linearRatio:number, power:number, yoyoMode:boolean):SlowMo;
+        config(linearRatio:number, power:number, yoyoMode:boolean):SlowMo;
+        getRatio(p:number):number;
+    }
+    interface SteppedEase {
+        config(steps:number):SteppedEase;
+        getRatio(p:number):number;
+    }
+    interface Strong {
+        easeIn:Ease;
+        easeInOut:Ease;
+        easeOut:Ease;
+    }
 
 //com.TweenLite.plugins
-declare var BezierPlugin:BezierPlugin;
-declare var ColorPropsPlugin:ColorPropsPlugin;
-declare var CSSPlugin:CSSPlugin;
-declare var CSSRulePlugin:CSSRulePlugin;
-declare var EaselPlugin:EaselPlugin;
-declare var RaphaelPlugin:RaphaelPlugin;
-declare var RoundPropsPlugin:RoundPropsPlugin;
-declare var ScrollToPlugin:ScrollToPlugin;
-declare var TweenPlugin:TweenPlugin;
+    interface BezierPlugin extends TweenPlugin {
+        bezierThrough(values:any[], curviness?:number, quadratic?:boolean, correlate?:string, prepend?:Object, calcDifs?:boolean):Object;
+        cubicToQuadratic(a:number, b:number, c:number, d:number):any[];
+        quadraticToCubic(a:number, b:number, c:number):Object;
+    }
+    interface ColorPropsPlugin extends TweenPlugin {
 
-//declare var timelineLite: TimelineLite;
+    }
+    interface CSSPlugin extends TweenPlugin {
+
+    }
+    interface CSSRulePlugin extends TweenPlugin {
+        getRule(selector:string):Object;
+    }
+    interface EaselPlugin extends TweenPlugin {
+
+    }
+    interface RaphaelPlugin extends TweenPlugin {
+
+    }
+    interface RoundPropsPlugin extends TweenPlugin {
+
+    }
+    interface ScrollToPlugin extends TweenPlugin {
+
+    }
+    interface TweenPlugin {
+        activate(plugins:any[]):boolean;
+    }
+
+}
+
+
+interface IDispatcher {
+    addEventListener(type:string, callback:Function, scope?:Object, useParam?:boolean, priority?:number):void;
+    removeEventListener(type:string, callback:Function):void;
+}
 
 
