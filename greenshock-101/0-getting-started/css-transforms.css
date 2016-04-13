@@ -1,0 +1,28 @@
+body{
+    background-color:#000;
+    color:white;
+}
+
+.demo {
+    width: 692px;
+    height: 60px;
+    background-color: #333;
+    padding: 8px;
+}
+
+
+.logo1 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/logo_black_1.jpg)no-repeat;
+}
+
+
+.logo2 {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/logo_black_1.jpg)no-repeat;
+    margin-left: 100px;
+}

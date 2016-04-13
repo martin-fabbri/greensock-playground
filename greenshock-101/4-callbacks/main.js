@@ -22,4 +22,4 @@ TweenLite.from(img, 1, {
     onUpdate: onUpdate,
     onComplete: onComplete
 });
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=basic-tween.js.map.js.map

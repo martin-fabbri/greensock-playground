@@ -27,4 +27,4 @@ tl
     .from(h2, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '-=0.15')
     .from(listItemUl, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '-=0.15')
     .from(listItemLi, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, '-=0.15');
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=basic-tween.js.map.js.map
