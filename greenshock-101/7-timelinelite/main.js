@@ -48,4 +48,4 @@ restartButton.onclick = function () {
     tl.restart();
 };
 //endregion
-//# sourceMappingURL=basic-tween.js.map.js.map
+//# sourceMappingURL=main.js.map

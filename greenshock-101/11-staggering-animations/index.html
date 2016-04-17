@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <title>Greenshocks 101 - Controlling Timeline Playback</title>
+    <meta name="description" content="labels">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser.
+    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<header id="header">
+    <h1><span>Geenshock 101</span><em></em></h1>
+    <p class="intro">Controlling Timeline Playback</p>
+    <img src="../img/greensock-logo.svg" alt="greensock logo">
+    <h2>Table of content</h2>
+    <ul class="list">
+        <li><a href="#"><span><strong>Lesson 1</strong>Selectors</span></a></li>
+        <li><a href="#"><span><strong>Lesson 2</strong>Selectors</span></a></li>
+    </ul>
+</header>
+
+<div class="buttons">
+    <button id="btnPlay">play</button>
+    <button id="btnPause">pause</button>
+    <button id="btnResume">resume</button>
+    <button id="btnReverse">reverse</button>
+    <button id="btnSpeedUp">speed up</button>
+    <button id="btnSlowDown">slow down</button>
+    <button id="btnSeek">seek 1 sec</button>
+    <button id="btnProgress">go to 50%</button>
+    <button id="btnRestart">restart</button>
+</div>
+
+<script src="../../jspm_packages/system.js"></script>
+<script src="../../config.js"></script>
+
+<script>
+    System.config({
+        map: {
+            TweenLite: './../../node_modules/gsap/src/uncompressed/TweenLite.js',
+            CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js',
+            TimelineLite: './../../node_modules/gsap/src/uncompressed/TimelineLite.js'
+        }
+    });
+
+    System.import('./main');
+</script>
+
+</body>
+</html>

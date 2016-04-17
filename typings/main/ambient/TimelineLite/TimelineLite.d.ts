@@ -147,7 +147,7 @@ declare module "TimelineLite" {
     }
 
     interface TimelineLiteFactory {
-        new(): TimelineLite;
+        new(vars?: Object): TimelineLite;
     }
 
 //com.TweenLite.easing

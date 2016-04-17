@@ -26,4 +26,4 @@ tl
     .from(h2, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, 'intro')
     .from(listItemUl, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, 'intro+=3')
     .from(listItemLi, 0.3, { y: -15, autoAlpha: 0, ease: Power1.easeOut }, 'intro+=3');
-//# sourceMappingURL=basic-tween.jsween.js.map
+//# sourceMappingURL=main.js.map

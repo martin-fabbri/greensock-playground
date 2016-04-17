@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <title>Greenshocks 101 - Position Parameter</title>
+    <meta name="description" content="Position Parameter">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="./../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+
+    <div class="nav">
+        <button class="dark-grey-button club-demo-button" id="restart">restart</button>
+    </div>
+    <div class="animation">
+        <img src="img/car.png" class="car" id="car">
+        <img src="img/lift.png" class="lift" id="lift">
+        <img src="img/supervisor.png" class="man" id="man">
+    </div>
+
+    <script src="../../jspm_packages/system.js"></script>
+    <script src="../../config.js"></script>
+
+    <script>
+        System.config({
+            map: {
+                TweenLite: './../../node_modules/gsap/src/uncompressed/TweenLite.js',
+                CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js',
+                TimelineLite: './../../node_modules/gsap/src/uncompressed/TimelineLite.js'
+            }
+        });
+
+        System.import('./main');
+    </script>
+
+</body>
+</html>
