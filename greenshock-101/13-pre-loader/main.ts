@@ -1,6 +1,5 @@
 /// <reference path="../../typings/main/ambient/TweenLite/TweenLite.d.ts" />
 /// <reference path="../../typings/main/ambient/TimelineMax/TimelineMax.d.ts" />
-import * as TweenLite from 'TweenLite';
 import * as TimelineMax from 'TimelineMax';
 import 'CSSPlugin';
 import 'EasePack';
@@ -12,6 +11,7 @@ const h1 = document.getElementsByTagName('h1');
 const intro = document.getElementsByClassName('intro');
 const listItemUl = document.getElementsByTagName('ul');
 const listItemLi = document.getElementsByTagName('li');
+const header = document.getElementById('header');
 //endregion
 
 //region JavaScript Element Selectors
@@ -33,13 +33,11 @@ const buttons = document.getElementsByTagName('button');
 //endregion
 
 
-const loadContent = ()=> {
-    console.log('Bring on the content');
-    tl.play();
-};
 
-const tl = new TimelineLite({paused: true});
+
+const tl = new TimelineMax({paused: true});
 tl
+    .set(header, {autoAlpha: 1})
     .from(h1, 1, {y: -15, autoAlpha: 0, ease: Power1.easeOut})
     .add('intro')
     .from(intro, 1, {y: -15, autoAlpha: 0, ease: Power1.easeOut})
@@ -56,6 +54,10 @@ tl
         ease: Power1.easeOut,
         autoAlpha: 0
     }, 0.1);
+
+const contentIn = ()=> {
+    tl.play();
+}
 
 playButton.onclick = ()=> {
     tl.play();
@@ -95,6 +97,24 @@ restartButton.onclick = ()=> {
 };
 
 
+//region Content Loader Timeline
+const tlLoaderOut = new TimelineMax({paused: true, onComplete: contentIn});
+tlLoaderOut
+    .set(dot, {backgroundColor: '#2b4d66'})
+    .to(loader, 0.3, {autoAlpha: 1, scale: 1.3, ease: Power0.easeOut})
+    .staggerFromTo(dot, 0.3,
+        {y: 0, autoAlpha: 0},
+        {y: 20, autoAlpha: 1, ease: Back.easeInOut},
+        0.05, 0
+    )
+    .to(loader, 0.3, {y: -150, autoAlpha: 0, ease: Back.easeIn}, '+=0.3');
+//endregion
+
+const loadContent = ()=> {
+    tlLoaderOut.play();
+};
+
+
 //region Loader Timeline
 const tlLoader = new TimelineMax({repeat: 2, onComplete: loadContent});
 tlLoader
@@ -109,3 +129,10 @@ tlLoader
         0.9
     );
 //endregion
+
+
+
+
+
+
+

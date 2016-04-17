@@ -1,4 +1,6 @@
 "use strict";
+/// <reference path="../../typings/main/ambient/TweenLite/TweenLite.d.ts" />
+/// <reference path="../../typings/main/ambient/TimelineMax/TimelineMax.d.ts" />
 var TimelineMax = require('TimelineMax');
 require('CSSPlugin');
 require('EasePack');
@@ -9,6 +11,7 @@ var h1 = document.getElementsByTagName('h1');
 var intro = document.getElementsByClassName('intro');
 var listItemUl = document.getElementsByTagName('ul');
 var listItemLi = document.getElementsByTagName('li');
+var header = document.getElementById('header');
 //endregion
 //region JavaScript Element Selectors
 var dot = document.getElementsByClassName('dot');
@@ -26,12 +29,9 @@ var goTo50PercentButton = document.getElementById('btnProgress');
 var restartButton = document.getElementById('btnRestart');
 var buttons = document.getElementsByTagName('button');
 //endregion
-var loadContent = function () {
-    console.log('Bring on the content');
-    tl.play();
-};
-var tl = new TimelineLite({ paused: true });
+var tl = new TimelineMax({ paused: true });
 tl
+    .set(header, { autoAlpha: 1 })
     .from(h1, 1, { y: -15, autoAlpha: 0, ease: Power1.easeOut })
     .add('intro')
     .from(intro, 1, { y: -15, autoAlpha: 0, ease: Power1.easeOut })
@@ -48,6 +48,9 @@ tl
     ease: Power1.easeOut,
     autoAlpha: 0
 }, 0.1);
+var contentIn = function () {
+    tl.play();
+};
 playButton.onclick = function () {
     tl.play();
 };
@@ -75,6 +78,17 @@ goTo50PercentButton.onclick = function () {
 };
 restartButton.onclick = function () {
     tl.restart();
+};
+//region Content Loader Timeline
+var tlLoaderOut = new TimelineMax({ paused: true, onComplete: contentIn });
+tlLoaderOut
+    .set(dot, { backgroundColor: '#2b4d66' })
+    .to(loader, 0.3, { autoAlpha: 1, scale: 1.3, ease: Power0.easeOut })
+    .staggerFromTo(dot, 0.3, { y: 0, autoAlpha: 0 }, { y: 20, autoAlpha: 1, ease: Back.easeInOut }, 0.05, 0)
+    .to(loader, 0.3, { y: -150, autoAlpha: 0, ease: Back.easeIn }, '+=0.3');
+//endregion
+var loadContent = function () {
+    tlLoaderOut.play();
 };
 //region Loader Timeline
 var tlLoader = new TimelineMax({ repeat: 2, onComplete: loadContent });
