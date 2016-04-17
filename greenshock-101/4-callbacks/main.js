@@ -1,5 +1,5 @@
 "use strict";
-/// <reference path="../../typings/main/ambient/TweenLite/TimelineLite.d.ts" />
+/// <reference path="../../typings/main/ambient/TweenLite/TimelineMax.d.ts" />
 var TweenLite = require('TweenLite');
 require('CSSPlugin');
 //region JQuery Element Selectors
