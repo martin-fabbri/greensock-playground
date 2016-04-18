@@ -1,5 +1,5 @@
 "use strict";
-/// <reference path="../../typings/main/ambient/TweenLite/TweenLite.d.ts" />
+/// <reference path="../../typings/main/ambient/TweenLite/TweenMax.d.ts" />
 /// <reference path="../../typings/main/ambient/TimelineLite/TimelineMax.d.ts" />
 var TweenLite = require('TweenLite');
 require('CSSPlugin');

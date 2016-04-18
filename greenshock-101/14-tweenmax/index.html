@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <title>Greenshocks 101 - TweenMax</title>
+    <meta name="description" content="labels">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser.
+        Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="perspective">
+        <div id="boxHTML" class="box">
+            <p>DIV</p>
+            <span id="htmlDOT"></span>
+        </div>
+
+
+
+        <!-- HTML box -->
+        <svg
+                id="boxSVG"
+                class="box"
+                version="1.1"
+                baseProfile="full"
+                width="200"
+                height="200"
+                xmlns="http://www.w3.org/2000/svg"
+        >
+            <rect width="100%" height="100%" fill="#2b4d66"></rect>
+            <circle id="svgcircle" class="circ" cx="100" cy="100" r="20" fill="#b1dec7"></circle>
+            <text x="100" y="170" font-size="40" text-anchor="middle" fill="white">SVG</text>
+            <circle class="circStroke" cx="100" cy="100" r="95" fill="#2b4d66"></circle>
+        </svg>
+
+    </div>
+
+
+
+
+
+    <p class="thanks">Thank You!</p>
+
+    <!-- Helper lines -->
+    <div class="line centerH"></div>
+    <div class="line centerW"></div>
+
+    <div class="buttons">
+        <button id="btnNext">next</button>
+        <button id="btnPrev">prev</button>
+    </div>
+
+
+    <script src="../../jspm_packages/system.js"></script>
+    <script src="../../config.js"></script>
+
+    <script>
+        System.config({
+            map: {
+                TweenMax: './../../node_modules/gsap/src/uncompressed/TweenMax.js',
+                TweenLite: './../../node_modules/gsap/src/uncompressed/TweenLite.js',
+                TimelineLite: './../../node_modules/gsap/src/uncompressed/TimelineLite.js',
+                CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js'
+            }
+        });
+
+        System.import('./main');
+    </script>
+
+</body>
+</html>
