@@ -20,4 +20,4 @@
     //TweenLite.from(img, 1, {x: -200, ease: SteppedEase.config(12), y: 0});
     TweenLite.from(h2, 1, { autoAlpha: 0, delay: 1 });
 })(jQuery);
-//# sourceMappingURL=basic-tween.jsween.js.map
+//# sourceMappingURL=main.js.map

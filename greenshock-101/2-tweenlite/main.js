@@ -10,4 +10,4 @@
     //TweenLite.fromTo(img, 1, {x: -200}, {x: 200});
     TweenLite.from(h2, 1, { autoAlpha: 0, delay: 1 });
 })(jQuery);
-//# sourceMappingURL=basic-tween.js.map.js.map
+//# sourceMappingURL=main.js.map

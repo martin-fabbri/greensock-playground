@@ -1,5 +1,5 @@
 "use strict";
-/// <reference path="../../typings/main/ambient/TweenLite/TimelineMax.d.ts" />
+/// <reference path="../../typings/main/ambient/TweenLite/TweenLite.d.ts" />
 var TweenLite = require('TweenLite');
 require('CSSPlugin');
 //region JQuery Element Selectors
@@ -22,4 +22,4 @@ TweenLite.from(img, 1, {
     onUpdate: onUpdate,
     onComplete: onComplete
 });
-//# sourceMappingURL=basic-tween.js.map.js.map
+//# sourceMappingURL=main.js.map

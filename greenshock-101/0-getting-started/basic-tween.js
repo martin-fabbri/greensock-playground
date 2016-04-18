@@ -1,6 +1,6 @@
 "use strict";
-/// <reference path="../../typings/main/ambient/TweenLite/TweenMax.d.ts" />
-/// <reference path="../../typings/main/ambient/TimelineLite/TimelineMax.d.ts" />
+/// <reference path="../../typings/main/ambient/TweenLite/TweenLite.d.ts" />
+/// <reference path="../../typings/main/ambient/TimelineLite/TimelineLite.d.ts" />
 var TweenLite = require('TweenLite');
 require('CSSPlugin');
 // logo1 animation

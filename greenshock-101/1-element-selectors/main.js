@@ -17,4 +17,4 @@ var lastItem = document.getElementsByClassName('list')[0].lastElementChild;
 //endregion
 TweenLite.to(h1, 1, { opacity: 0, x: 50 });
 //})(jQuery);
-//# sourceMappingURL=basic-tween.js.map.js.map
+//# sourceMappingURL=main.js.map
