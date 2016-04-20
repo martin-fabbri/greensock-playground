@@ -23,8 +23,91 @@
         Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div>
-        Content goes here!
+    <div class="bcg">
+        <div class="hero">
+
+            <!-- Top part -->
+            <div class="top">
+
+                <a href="https://ihatetomatoes.net/blog/" class="logo"><img src="img/icon-logo.png" /></a>
+
+                <!-- Slide 1 top content -->
+                <div class="homeSlide slide01 active">
+
+                    <h1>Green<span>Sock</span> Tilt Effect</h1>
+
+                </div>
+
+                <!-- Slide 2 top content -->
+                <div class="homeSlide slide02">
+
+                    <h1>Split Screen Slider</h1>
+
+                </div>
+
+                <!-- Slide 3 top content -->
+                <div class="homeSlide slide03">
+
+                    <h1>Slide 3 Title</h1>
+
+                </div>
+
+            </div><!-- /Top part -->
+
+            <!-- Bottom part -->
+            <div class="bottom">
+
+                <!-- Slide 1 bottom content -->
+                <div class="homeSlide slide01 active">
+
+                    <p>
+                        Move your mouse to see the tilt effect in action.<br />
+                        <em>Your current position is: <strong>0, 0</strong></em>
+                    </p>
+
+                </div>
+
+                <!-- Slide 2 bottom content -->
+                <div class="homeSlide slide02">
+
+                    <p>
+                        Another slide description goes here.
+                    </p>
+
+                </div>
+
+                <!-- Slide 3 bottom content -->
+                <div class="homeSlide slide03">
+
+                    <p>
+                        Another slide description goes here.
+                    </p>
+
+                </div>
+
+            </div><!-- /Bottom part -->
+
+            <!-- Fancy divider with gradient backgound -->
+            <div class="divider"></div>
+
+        </div>
+
+        <!-- Prev/Next Navigation -->
+        <div id="slideNav">
+            <ul>
+                <li class="slideNavPrev">
+                    <a href="#" title="Go to previous slide">
+                        <span class="ico ico-up">↓</span>
+                    </a>
+                </li>
+                <li class="slideNavNext">
+                    <a href="#" title="Go to next slide">
+                        <span class="ico ico-down">↑</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 
     <script src="../jspm_packages/system.js"></script>
@@ -35,7 +118,8 @@
             map: {
                 TweenLite: './../node_modules/gsap/src/uncompressed/TweenLite.js',
                 TimelineLite: './../node_modules/gsap/src/uncompressed/TimelineLite.js',
-                CSSPlugin: './../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js'
+                CSSPlugin: './../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js',
+                jquery: './../../node_modules/jquery/dist/jquery.js',
             }
         });
 
