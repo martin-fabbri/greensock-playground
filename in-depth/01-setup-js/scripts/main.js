@@ -12,6 +12,7 @@ var $header = $('h1');
 //endregion
 //region Animations
 var startTween = function () {
+    var initialDelay = 1;
     TweenLite.to($robust, 1, {
         x: 200,
         y: 225,
@@ -21,15 +22,20 @@ var startTween = function () {
         alpha: 0.2,
         //height: 200
         scale: 4,
-        onComplete: returnToNormal
+        delay: initialDelay,
+        onComplete: returnToNormal,
+        onCompleteParams: [$robust]
     });
     TweenLite.to($header, 1, {
         color: '#ff0000',
-        fontSize: '+=10'
+        fontSize: '+=10',
+        delay: initialDelay + 0.5,
+        onComplete: textReturnToNormal,
+        onCompleteParams: [$header]
     });
 };
-var returnToNormal = function () {
-    TweenLite.to($robust, 1, {
+var returnToNormal = function (targetElements) {
+    TweenLite.to(targetElements, 1, {
         x: 0,
         y: 0,
         //rotation: 90,
@@ -38,6 +44,12 @@ var returnToNormal = function () {
         alpha: 1,
         //height: 200
         scale: 1
+    });
+};
+var textReturnToNormal = function (targetElements) {
+    TweenLite.to(targetElements, 1, {
+        color: '#ffffff',
+        fontSize: '-=10'
     });
 };
 //endregion

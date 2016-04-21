@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Greensock In Depth - 01 Setup JS</title>
+        <title>Greensock In Depth - 02 TimelineLite</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -32,10 +32,9 @@
                     </div>
                     <div id="nav">
                         <img id="robust" src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_robust.png" width="83" height="59">
-                        <img src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_overwrite.png" width="43" height="59">
-                        <img src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_compatible.png" width="73" height="59">
-                        <img src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_support.png" width="83" height="59">
-                        <img src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_plugin.png" width="76" height="59">
+                        <img id="overwrite" src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_overwrite.png" width="43" height="59">
+                        <img id="compatible" src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_compatible.png" width="73" height="59">
+                        <img id="support" src="http://www.greensock.com/wp-content/uploads/custom/codepen/icon_support.png" width="83" height="59">
                     </div>
                 </div>
             </div>
@@ -45,7 +44,7 @@
             <footer class="wrapper">
                 <button id="start">Start</button>
                 <button id="pause">Pause</button>
-                <button id="stop">Stop</button>
+                <button id="restart">Restart</button>
                 <button id="reverse">Reverse</button>
             </footer>
         </div>
@@ -58,7 +57,9 @@
                 map: {
                     jquery: './../../node_modules/jquery/dist/jquery.js',
                     TweenLite: './../../node_modules/gsap/src/uncompressed/TweenLite.js',
-                    CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js'
+                    TimelineLite: './../../node_modules/gsap/src/uncompressed/TimelineLite.js',
+                    CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js',
+                    EasePack: './../../node_modules/gsap/src/uncompressed/easing/EasePack.js'
                 }
             });
 

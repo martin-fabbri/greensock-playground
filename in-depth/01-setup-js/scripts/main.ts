@@ -13,6 +13,8 @@ const $header = $('h1');
 
 //region Animations
 const startTween = ()=> {
+    const initialDelay = 1;
+
     TweenLite.to($robust, 1, {
         x: 200,
         y: 225,
@@ -22,18 +24,23 @@ const startTween = ()=> {
         alpha: 0.2,
         //height: 200
         scale: 4,
-        onComplete: returnToNormal
+        delay: initialDelay,
+        onComplete: returnToNormal,
+        onCompleteParams: [$robust]
     });
 
 
     TweenLite.to($header, 1, {
         color: '#ff0000',
-        fontSize: '+=10'
+        fontSize: '+=10',
+        delay: initialDelay + 0.5,
+        onComplete: textReturnToNormal,
+        onCompleteParams: [$header]
     });
 }
 
-const returnToNormal = ()=> {
-    TweenLite.to($robust, 1, {
+const returnToNormal = (targetElements: Object[])=> {
+    TweenLite.to(targetElements, 1, {
         x: 0,
         y: 0,
         //rotation: 90,
@@ -42,6 +49,13 @@ const returnToNormal = ()=> {
         alpha: 1,
         //height: 200
         scale: 1
+    });
+}
+
+const textReturnToNormal = (targetElements: Object[])=> {
+    TweenLite.to(targetElements, 1, {
+        color: '#ffffff',
+        fontSize: '-=10'
     });
 }
 //endregion
