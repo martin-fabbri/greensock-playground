@@ -1,0 +1,77 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Greensock DrawSVGPlugin - 00 Getting started</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+    <h2>DrawSVGPlugin Values</h2>
+
+    <svg version="1.1"
+         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="516.3px"
+         height="190px"
+         viewBox="0 0 516.3 190"
+         style="enable-background:new 0 0 516.3 211.99;" xml:space="preserve">
+        <path id="template" d="M9.13,99.99c0,0,18.53-41.58,49.91-65.11c30-22.5,65.81-24.88,77.39-24.88c33.87,0,57.55,11.71,77.05,28.47c23.09,19.85,40.33,46.79,61.71,69.77c24.09,25.89,53.44,46.75,102.37,46.75c22.23,0,40.62-2.83,55.84-7.43c27.97-8.45,44.21-22.88,54.78-36.7c14.35-18.75,16.43-36.37,16.43-36.37"></path>
+        <path id="path" d="M9.13,99.99c0,0,18.53-41.58,49.91-65.11c30-22.5,65.81-24.88,77.39-24.88c33.87,0,57.55,11.71,77.05,28.47c23.09,19.85,40.33,46.79,61.71,69.77c24.09,25.89,53.44,46.75,102.37,46.75c22.23,0,40.62-2.83,55.84-7.43c27.97-8.45,44.21-22.88,54.78-36.7c14.35-18.75,16.43-36.37,16.43-36.37" style="visibility: visible;"></path>
+    </svg>
+
+    <h2>DrawSVGPlugin Elements</h2>
+
+    <svg version="1.1" baseProfile="tiny" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         x="0px" y="0px" width="570px" height="150px" viewBox="0 0 570 150" xml:space="preserve">
+        <circle fill="none" cx="71.5" cy="77.5" r="51.5" stroke="#88CE02" stroke-width="4"/>
+        <ellipse fill="none" stroke="#88CE02" stroke-width="4" stroke-miterlimit="10" cx="241.4" cy="77.5" rx="78.9" ry="51.5"/>
+        <rect x="354" y="26" fill="none" stroke="#88CE02" stroke-linecap="square" stroke-width="4" stroke-miterlimit="30" width="103" height="103" id="rect" />
+        <polyline fill="none" stroke="#88CE02" stroke-width="4" stroke-miterlimit="10" points="536.1,129 487.3,74.2 536.1,26 "/>
+    </svg>
+
+    <br>
+    <div id="slider"></div>
+    <div id="replay"
+         style="position:relative; display:inline-block; text-align:right; cursor:pointer; color:#999999; font-family:Arial, Verdana, sans-serif; font-size:12px; bottom: 35px; margin-left: 24px;">
+        replay <img id="replayIcon" src="http://greensock.com/_img/codepen/allDevicesBanner/replay.png" width="19"
+                    height="19" style="margin-left:2px; vertical-align: middle;"/></div>
+
+<script src="../../jspm_packages/system.js"></script>
+<script src="../../config.js"></script>
+
+<script>
+    System.config({
+        map: {
+            jquery: './../../node_modules/jquery/dist/jquery.js',
+            TweenLite: './../../node_modules/gsap/src/uncompressed/TweenLite.js',
+            TimelineLite: './../../node_modules/gsap/src/uncompressed/TimelineLite.js',
+            CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js',
+            EasePack: './../../node_modules/gsap/src/uncompressed/easing/EasePack.js',
+            DrawSVGPlugin: './js/DrawSVGPlugin.min.js'
+        }
+    });
+
+    System.import('./scripts/main');
+</script>
+
+</body>
+</html>

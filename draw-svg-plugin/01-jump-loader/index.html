@@ -1,0 +1,80 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Greensock In Depth - 02 TimelineLite</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container">
+            <div class="content">
+                <svg id="loader" width="200px" height="200px" viewBox="0 0 200 200">
+                    <path
+                            id="jump"
+                            fill="none"
+                            stroke="#2d2d2d"
+                            stroke-width="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-miterlimit="10"
+                            d="M47.5,94.3c0-23.5,19.9-42.5,44.5-42.5s44.5,19,44.5,42.5" />
+                    <g
+                            stroke="#2d2d2d"
+                            stroke-width="1">
+                        <ellipse
+                                id="circleL"
+                                fill="none"
+                                stroke-miterlimit="10"
+                                cx="47.2"
+                                cy="95.6"
+                                rx="10.7"
+                                ry="2.7" />
+                        <ellipse
+                                id="circleR"
+                                fill="none"
+                                stroke-miterlimit="10"
+                                cx="136.2"
+                                cy="95.6"
+                                rx="10.7"
+                                ry="2.7" />
+                    </g>
+                </svg>
+            </div>
+        </div>
+
+        <script src="../../jspm_packages/system.js"></script>
+        <script src="../../config.js"></script>
+
+        <script>
+            System.config({
+                map: {
+                    jquery: './../../node_modules/jquery/dist/jquery.js',
+                    TweenLite: './../../node_modules/gsap/src/uncompressed/TweenLite.js',
+                    TimelineMax: './../../node_modules/gsap/src/uncompressed/TimelineMax.js',
+                    CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js',
+                    EasePack: './../../node_modules/gsap/src/uncompressed/easing/EasePack.js',
+                    AttrPlugin: './../../node_modules/gsap/src/uncompressed/plugins/AttrPlugin.js',
+                    DrawSVGPlugin: './js/DrawSVGPlugin.min.js'
+                }
+            });
+
+            System.import('./scripts/main');
+        </script>
+
+    </body>
+</html>
