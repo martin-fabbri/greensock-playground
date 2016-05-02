@@ -1,0 +1,90 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Greensock In Depth - 04 Draggable</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="mainTitle">
+            <span class="asapReg">Green</span>
+            <span class="greenText">Sock</span>
+            <span class="greenText">Draggable</span>
+        </div>
+        
+        <div class="container-wrapper">
+            <section class="gridContainer">
+                <section class="gridRows">
+                    <section class="gridBox gridBoxTopLeft">
+                        <section class="moveAble gridBoxImage">
+                            <img src="img/crazy-fast.svg" alt="">
+                        </section>
+                    </section>
+                    <section class="gridBox"></section>
+                    <section class="gridBox"></section>
+                    <section class="gridBox gridBoxTopRight"></section>
+                </section>
+
+                <section class="gridRows">
+                    <section class="gridBox gridBoxTopLeft">
+                        <section class="moveAble gridBoxImage">
+                            <img src="img/greensock-logo.svg" alt="">
+                        </section>
+                    </section>
+                    <section class="gridBox"></section>
+                    <section class="gridBox"></section>
+                    <section class="gridBox gridBoxTopRight"></section>
+                </section>
+
+                <section class="gridRows">
+                    <section class="gridBox gridBoxTopLeft">
+                        <section class="moveAble gridBoxImage">
+                            <img src="img/tool-box.svg" alt="">
+                        </section>
+                    </section>
+                    <section class="gridBox"></section>
+                    <section class="gridBox"></section>
+                    <section class="gridBox gridBoxTopRight"></section>
+                </section>
+
+            </section>
+        </div>
+
+        <script src="../../jspm_packages/system.js"></script>
+        <script src="../../config.js"></script>
+
+        <script>
+            System.config({
+                map: {
+                    jquery: './../../node_modules/jquery/dist/jquery.js',
+                    TweenMax: './../../node_modules/gsap/src/uncompressed/TweenMax.js',
+                    TweenLite: './../../node_modules/gsap/src/uncompressed/TweenLite.js',
+                    TimelineMax: './../../node_modules/gsap/src/uncompressed/TimelineMax.js',
+                    TimelineLite: './../../node_modules/gsap/src/uncompressed/TimelineLite.js',
+                    CSSPlugin: './../../node_modules/gsap/src/uncompressed/plugins/CSSPlugin.js',
+                    EasePack: './../../node_modules/gsap/src/uncompressed/easing/EasePack.js',
+                    Draggable: './../../node_modules/gsap/src/uncompressed/utils/Draggable.js',
+                    ThrowPropsPlugin: './js/vendor/tpp.js'
+                }
+            });
+
+            System.import('./scripts/main');
+        </script>
+
+    </body>
+</html>
